@@ -1534,6 +1534,7 @@ define([
                 Common.Gateway.on('processmouse',           _.bind(me.onProcessMouse, me));
                 Common.Gateway.on('refreshhistory',         _.bind(me.onRefreshHistory, me));
                 Common.Gateway.on('downloadas',             _.bind(me.onDownloadAs, me));
+                Common.Gateway.on('print',                  _.bind(me.onPrint, me));
                 Common.Gateway.on('setfavorite',            _.bind(me.onSetFavorite, me));
                 Common.Gateway.on('requestclose',           _.bind(me.onRequestClose, me));
                 this.appOptions.canRequestSaveAs && Common.Gateway.on('internalcommand', function(data) {
@@ -3075,6 +3076,7 @@ define([
             },
 
             onPrintUrl: function(url) {
+                Common.Gateway.print();
                 if (this.iframePrint) {
                     this.iframePrint.parentNode.removeChild(this.iframePrint);
                     this.iframePrint = null;

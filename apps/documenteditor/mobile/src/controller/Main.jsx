@@ -408,6 +408,7 @@ class MainController extends Component {
 
                 Common.Gateway.on('processrightschange', this.onProcessRightsChange.bind(this));
                 Common.Gateway.on('downloadas', this.onDownloadAs.bind(this));
+                Common.Gateway.on('print', this.onPrint.bind(this));
                 Common.Gateway.on('requestclose', this.onRequestClose.bind(this));
                 Common.Gateway.on('setfavorite', this.onSetFavorite.bind(this));
                 Common.Gateway.on('insertimage', this.insertImage.bind(this));
@@ -1450,6 +1451,8 @@ class MainController extends Component {
     }
 
     onPrintUrl (url) {
+        Common.Gateway.print();
+
         if (this.iframePrint) {
             this.iframePrint.parentNode.removeChild(this.iframePrint);
             this.iframePrint = null;

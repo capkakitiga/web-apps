@@ -1156,6 +1156,7 @@ define([
         },
 
         onPrintUrl: function(url) {
+            Common.Gateway.print();
             if (this.iframePrint) {
                 this.iframePrint.parentNode.removeChild(this.iframePrint);
                 this.iframePrint = null;
@@ -1641,6 +1642,7 @@ define([
 
             Common.Gateway.on('processmouse',       _.bind(this.onProcessMouse, this));
             Common.Gateway.on('downloadas',         _.bind(this.onDownloadAs, this));
+            Common.Gateway.on('print',              _.bind(this.onPrint, this));
             Common.Gateway.on('requestclose',       _.bind(this.onRequestClose, this));
 
             this.attachUIEvents();

@@ -309,6 +309,7 @@
                 'onInfo': <document open callback>,// send view or edit mode
                 'onOutdatedVersion': <outdated version callback>,// send when  previous version is opened, deprecated: use onRequestRefreshFile/refreshFile instead
                 'onDownloadAs': <download as callback>,// send url of downloaded file as a response for downloadAs method
+                'onPrint': <print callback>,// send when print
                 'onRequestSaveAs': <try to save copy of the document>,
                 'onCollaborativeChanges': <co-editing changes callback>,// send when other user co-edit document
                 'onRequestRename': <try to rename document>,
@@ -745,6 +746,13 @@
             });
         };
 
+        var _print = function(data) {
+            _sendCommand({
+                command: 'print',
+                data: data
+            });
+        };
+
         var _setUsers = function(data) {
             _sendCommand({
                 command: 'setUsers',
@@ -901,6 +909,7 @@
             setActionLink       : _setActionLink,
             processMailMerge    : _processMailMerge,
             downloadAs          : _downloadAs,
+            print               : _print,
             serviceCommand      : _serviceCommand,
             attachMouseEvents   : _attachMouseEvents,
             detachMouseEvents   : _detachMouseEvents,

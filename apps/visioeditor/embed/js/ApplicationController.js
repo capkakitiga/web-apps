@@ -409,6 +409,7 @@ VE.ApplicationController = new(function(){
     }
 
     function onPrintUrl(url) {
+        Common.Gateway.print();
         common.utils.dialogPrint(url, api);
     }
 
@@ -497,6 +498,7 @@ VE.ApplicationController = new(function(){
 
         Common.Gateway.on('processmouse',       onProcessMouse);
         Common.Gateway.on('downloadas',         onDownloadAs);
+        Common.Gateway.on('print',              onPrint);
         Common.Gateway.on('requestclose',       onRequestClose);
 
         VE.ApplicationView.tools.get('#idt-download')

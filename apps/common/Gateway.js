@@ -87,6 +87,10 @@ if (window.Common === undefined) {
                 $me.trigger('downloadas', data);
             },
 
+            'print': function(data) {
+                $me.trigger('print', data);
+            },
+
             'processMouse': function(data) {
                 $me.trigger('processmouse', data);
             },
@@ -317,6 +321,10 @@ if (window.Common === undefined) {
                         fileType: fileType
                     }
                 });
+            },
+
+            print: function() {
+                _postMessage({ event: 'onPrint' });
             },
 
             requestSaveAs: function(url, title, fileType) {

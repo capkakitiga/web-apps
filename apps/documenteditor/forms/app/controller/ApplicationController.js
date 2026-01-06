@@ -1111,6 +1111,7 @@ define([
         },
 
         onDownloadUrl: function(url, fileType) {
+            Common.Gateway.downloadAs(url);
             if (this.isFromBtnDownload) { // download as pdf
                 var me = this,
                     defFileName = this.embedConfig.docTitle;
@@ -1141,8 +1142,6 @@ define([
                     });
                     me._saveCopyDlg.show();
                 }
-            } else {
-                Common.Gateway.downloadAs(url);
             }
             this.isFromBtnDownload = false;
         },

@@ -2081,9 +2081,7 @@ define([
             },
 
             onDownloadUrl: function(url, fileType) {
-                if (this._state.isFromGatewayDownloadAs) {
-                    Common.Gateway.downloadAs(url, fileType);
-                }
+                Common.Gateway.downloadAs(url, fileType);
                 this._state.isFromGatewayDownloadAs = false;
             },
 

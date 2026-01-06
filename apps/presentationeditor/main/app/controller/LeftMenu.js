@@ -328,6 +328,7 @@ define([
         },
 
         onDownloadUrl: function(url, fileType) {
+            Common.Gateway.downloadAs(url, fileType);
             if (this.isFromFileDownloadAs) {
                 var me = this,
                     defFileName = this.getApplication().getController('Viewport').getView('Common.Views.Header').getDocumentCaption();

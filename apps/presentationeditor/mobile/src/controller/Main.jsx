@@ -1074,7 +1074,6 @@ class MainController extends Component {
 
     onDownloadUrl(url, fileType) {
         Common.Gateway.downloadAs(url, fileType);
-
         this._state.isFromGatewayDownloadAs = false;
     }
 

@@ -171,7 +171,7 @@ define([
         textHighlightDeleted: 'Highlight deleted',
         textHideAll: 'Hide detailed changes',
         textShowAll: 'Show detailed changes',
-        textVer: 'ver.',
+        textVer: 'id.',
         textMore: 'More',
         textCloseHistory: 'Close history',
 

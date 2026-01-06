@@ -720,7 +720,7 @@ define([
                     this.getApplication().getController('LeftMenu').getView('LeftMenu').showHistory();
                     this.disableEditing(true);
                     this._renameDialog && this._renameDialog.close();
-                    var versions = opts.data.history,
+                    var versions = opts.data.history.reverse(),
                         historyStore = this.getApplication().getCollection('Common.Collections.HistoryVersions'),
                         currentVersion = null,
                         arrIds = [];

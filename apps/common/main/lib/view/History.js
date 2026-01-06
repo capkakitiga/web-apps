@@ -108,7 +108,7 @@ define([
                                     '<div class="item-title">',
                                         '<div class="user-date"><%= created %></div>',
                                         '<% if (markedAsVersion) { %>',
-                                            '<div class="user-version">' + this.textVer + '<%=version%></div>',
+                                            '<div class="user-version">id.<%=version%></div>',
                                         '<% } %>',
                                     '</div>',
                                     '<div class="user-name">',
@@ -171,7 +171,7 @@ define([
         textHighlightDeleted: 'Highlight deleted',
         textHideAll: 'Hide detailed changes',
         textShowAll: 'Show detailed changes',
-        textVer: 'id.',
+        textVer: 'ver.',
         textMore: 'More',
         textCloseHistory: 'Close history',
 

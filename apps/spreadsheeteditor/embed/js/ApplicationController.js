@@ -852,6 +852,7 @@ SSE.ApplicationController = new(function(){
             return;
         }
         if (api) {
+            Common.Gateway.downloadAs(url, fileType);
             var options = new Asc.asc_CDownloadOptions(Asc.c_oAscFileType.XLSX, true);
             options.asc_setIsSaveAs(true);
             api.asc_DownloadAs(options);
